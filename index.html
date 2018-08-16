@@ -21,51 +21,124 @@
 	<!-- STYLES -->
 
 		<!-- Fonts & Icons -->
-			<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400|Raleway:200,400,600" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400|Raleway:100,200,400,600" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 			<link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
 
 		<!-- Stylesheets -->
 			<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+			<link rel="stylesheet" href="./gridrules.css">
 			<link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
 
-	<header role="banner" class="index-header">
-		
-		<h1>Alex Warnes</h1>
-		
-		<div class="index-header-tile photography">
-			<p class="subtitle">Photography</p>
-		</div>		
-		
-			<div class="divider"></div>
-		
-		<div class="index-header-tile webDev">
-			<p class="subtitle">Web Development</p>
+	<nav class="nav-banner background-dark">
+		<a href="/" class="nav-name light-text">Alex Warnes Portfolio</a>
+	</nav>
+	
+	<header role="banner" class="landing-header">
+
+		<div class="introTile">
+			<h1 class="landing-link webdev"><a href="./webdevelopment">WEB DEVELOPMENT</a></h1>
 		</div>
 		
-		<h2 class="warning construction">New Site</br>Coming Soon</br><i class="fas fa-cog fa-spin"></i></h2>
+		<div class="introTile">
+			<h1 class="landing-link photography"><a href="#">PHOTOGRAPHY</a></h1>
+		</div>
 		
-		<p class="index-header-description">In the meantime, you can find my web apps through GitHub and photos through Instagram.</p>
-		<p class="index-header-description">Feel free to connect with me on any other platform, as I'm always interested in new projects or feedback. Thanks for visiting!</p>
+		<div class="introTile">
+			<h1 class="landing-link resources"><a href="#">RESOURCES</a></h1>
+		</div>
+		
+		<div class="introTile">
+			<h1 class="landing-link about"><a href="#">ABOUT</a></h1>
+		</div>
 
+		<div role="region" class="introTile social-media">
+
+			<a href="mailto:alex.s.warnes@gmail.com?subject=Contact%20Email" aria-label="Email" rel="noopener noreferrer">
+				<i class="far fa-envelope social-icon"></i>
+			</a>
+
+			<a href="https://github.com/AlexWarnes" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+				<i class="fab fa-github social-icon"></i>
+			</a>
+
+			<a href="https://www.instagram.com/alexwarnesphotos/" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+				<i class="fab fa-instagram social-icon"></i>
+			</a>
+
+			<a href="https://www.linkedin.com/in/alexwarnes/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+				<i class="fab fa-linkedin-in social-icon"></i>
+			</a>
+
+			<a href="https://twitter.com/a_warnes" target="_blank" aria-label="Twitter" rel="noopener noreferrer">
+				<i class="fab fa-twitter social-icon"></i>
+			</a>
+
+		</div>
+		
 	</header>
 
-	<main role="main" class="index-main">
-		<section role="region" class="social-media">
+	<main role="main">
 
-			<a href="mailto:alex.s.warnes@gmail.com?subject=Contact%20Email" aria-label="Email"><i class="far fa-envelope social-icon"></i></a>
-
-			<a href="https://github.com/AlexWarnes" target="_blank" aria-label="GitHub"><i class="fab fa-github social-icon"></i></a>
-
-			<a href="https://www.instagram.com/alexwarnesphotos/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram social-icon"></i></a>
-
-			<a href="https://www.linkedin.com/in/alexwarnes/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in social-icon"></i></a>
-
-			<a href="https://twitter.com/a_warnes" target="_blank" aria-label="Twitter"><i class="fab fa-twitter social-icon"></i></a>
-
+		<section class="landing-summary landing-webdev background-white col-6">
+			<div class="summary-box">
+				<div class="summary-header">
+					<i class="material-icons display-icon red">code</i>
+					<h2>Web Development</h2>
+				</div>
+				<p class="summary-text">Combining technology, creativity, and useability to help people in big and small ways.</p>
+				<a href="./webdevelopment/" class="summary-link dark-text">
+					<i class="material-icons">dashboard</i>
+					Portfolio
+				</a>
+			</div>
 		</section>
+		
+		<section class="landing-summary landing-photography background-white col-6">
+			<div class="summary-box">
+				<div class="summary-header">
+					<i class="material-icons display-icon violetred">camera</i>
+					<h2>Photography</h2>
+				</div>
+				<p class="summary-text">Capturing moments in space and time with astro, long exposure, landscape, and travel.</p>
+				<a href="./photography/" class="summary-link dark-text">
+					<i class="material-icons">collections</i>
+					Gallery
+				</a>
+			</div>
+		</section>
+		
+		<section class="landing-summary landing-resources background-white col-6">
+			<div class="summary-box">
+				<div class="summary-header">
+					<i class="material-icons display-icon lightblue">school</i>
+					<h2>Resources</h2>
+				</div>
+				<p class="summary-text">New to coding or to photography? Here are the most useful (and free) resources to help you get started.</p>
+				<a href="./resources/" class="summary-link dark-text">
+					<i class="material-icons">computer</i>
+					Learn
+				</a>
+			</div>
+		</section>
+		
+		<section class="landing-summary landing-about background-white col-6">
+			<div class="summary-box">
+				<div class="summary-header">
+					<i class="material-icons display-icon green">recent_actors</i>
+					<h2>About Me</h2>
+				</div>
+				<p class="summary-text">Travel, space, space travel, coffee, technology, movies, international relations, and always learning...</p>
+				<a href="./about/" class="summary-link dark-text">
+					<i class="material-icons">free_breakfast</i>
+					Let's talk
+				</a>
+			</div>
+		</section>
+
 	</main>
 
 </body>

@@ -1,144 +1,213 @@
-
-/*===================================================*/
-/* FOUNDATIONAL FORMATTING */
-/*===================================================*/
-
-body*{
+body * {
 	box-sizing: border-box;
+	padding: 0;
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
 	margin: 0;
-	padding: 5px;
-	min-height: 100vh;
-	background-color: #00223E;
-	/* fallback for old browsers */
-	background: #00223E;
-	/* Chrome 10-25, Safari 5.1-6 */
-	background: -webkit-linear-gradient(to top, #6E5656, #00223E);
-	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	background: linear-gradient(to top, #6E5656, #00223E);
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-h1, h2 {
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 200;
+	font-size: 1em;
 }
 
-h1 {
-	letter-spacing: 10px;
-}
-
-p {
+h1, h2, h3, h4 {
 	font-family: 'Raleway', sans-serif;
-	font-weight: 300;
-}
-
-.subtitle {
-	width: 225px;
-	margin: 0;
-	font-weight: 200;
-	font-size: 24px;
-	letter-spacing: 7px;
-}
-
-.warning {
-	color: #FF6700;
-	text-shadow: 0 0 20px #25344688;
-	letter-spacing: 5px;
-	font-weight: 200;
-	line-height: 30px;
-}
-
-/*===================================================*/
-/* HEADER */
-/*===================================================*/
-
-.index-header {
-	text-align: center;
-	color: white;
-}
-
-.index-header h1 {
-	margin-bottom: 10px;
-	font-size: 60px;
 	font-weight: 100;
 }
 
-.index-header-tile {
-	display: inline-flex;
-	align-items: center;
+.material-icons {
 	vertical-align: middle;
-	width: 30%;
-	height: 100px;
+}
+
+a {
+	text-decoration: none;
+	transition: all .3s;
+}
+
+a.dark-text {
+	color: #252C3A
+}
+
+a.light-text {
+	color: #FFFFFF;
+}
+
+.display-icon {
+	font-size: 40px;
+}
+
+.red {
+	color: #ff0000;
+}
+
+.violetred {
+	color: #c71585;
+}
+
+.green {
+	color: #55b392;
+}
+
+.lightblue {
+	color: #1e90ff;
+}
+
+.blue {
+	color: #0026ff;
+}
+
+.orange {
+	color: #df5900;
+}
+
+.background-white {
+	background-color: #EAECF2;
+	color: #252C3A
+}
+
+.background-blue {
+	background-color: #2a3b5d;
+	color: #FFFFFF;
+}
+
+.background-dark {
+	background-color: #232C3A;
+	color: #FFFFFF;
+}
+
+.background-green {
+	background-color: rgb(27, 101, 89);
+	color: #FFFFFF;
+}
+
+/* tomato #F06449 */
+/*===================================================*/
+/* NAV BAR */
+/*===================================================*/
+
+.nav-banner {
+	padding: 15px;
 	text-align: center;
 }
 
-.index-header .subtitle {
-	color: #FFFFFFC4;
-}
-
-.index-header-tile.webDev {
-	padding-left: 60px;
-	justify-content: flex-start;
-}
-
-.index-header-tile.photography {
-	padding-right: 60px; 
-	justify-content: flex-end;
-}
-
-.divider {
-	display: inline-block;
-	vertical-align: middle;
+a.nav-name {
 	margin: 0;
-	width: 1px;
-	height: 75px;
-	border-right: 1px solid grey;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 100;
+	letter-spacing: 7px;
 }
 
-.index-header-description {
-	width: 500px;
-	margin: 20px auto;
-	text-align: left;
-	line-height: 25px;
+.nav-bar {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
-.warning .fa-cog {
-	letter-spacing: 0;
-	margin-top: 5px;
+/*===================================================*/
+/* LANDING PAGE */
+/*===================================================*/
+
+.landing-header {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 20px;
+	background-color: #FFFFFF;
+	box-shadow: 0 3px 6px #00000020;
+    position: relative;
 }
 
+.landing-link {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	font-size: 2.5em;
+	letter-spacing: 5px;
+	color: white;
+}
+
+.landing-link a {
+	color: #272727
+}
+
+.webdev a:hover {
+	color: #ff0000;
+}
+
+.photography a:hover {
+	color: #c71585;
+}
+
+.resources a:hover {
+	color: #1e90ff;
+}
+
+.about a:hover {
+	color: #55b392;
+}
+
+.introTile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	padding: 20px;
+}
+
+.landing-summary {
+	padding: 50px 40px 90px 40px;
+}
+
+.summary-box {
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.summary-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.summary-text {
+	font-weight: 400;
+	margin: 0 0 40px 0;
+	line-height: 1.25em;
+}
+
+.summary-link {
+	background-color: #FFFFFF;
+    padding: 15px 25px;
+	box-shadow: 4px 4px 8px #222c3a50;
+}
+
+.summary-link:hover {
+	box-shadow: 2px 2px 4px #222c3a50;
+	background-color: #2a3b5d;
+	color: #FFFFFF;
+}
 
 /*===================================================*/
 /* SOCIAL MEDIA BAR */
 /*===================================================*/
 
-.social-media {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 350px;
-	margin: 30px auto 0 auto;
-	font-size: 30px;
+.social-media a {
+	color: #242c3a;
+}
 
+.social-media {
+	justify-content: space-between;
+	width: 350px;
+	margin: 0 auto;
+	font-size: 30px;
 }
 
 .social-icon {
-	color: white;
 	transition: all .3s;
-}
-
-.social-icon.fa-linkedin-in {
-	font-size: 22px;
-	width: 24px;
-	height: 24px;
-	padding: 5px;
-	border-radius: 3px;
-	text-align: center;
 }
 
 .social-icon.fa-envelope:hover {
@@ -150,7 +219,7 @@ p {
 }
 
 .social-icon.fa-linkedin-in:hover {
-	background-color: #0077B5;
+	color: #0077B5;	
 }
 
 .social-icon.fa-instagram:hover {
@@ -163,48 +232,13 @@ p {
 	color: #1DA1F2;
 }
 
-
-/*===================================================*/
-/* MOBILE */
-/*===================================================*/
-
 @media only screen and (max-width: 640px) {
-	
-	body {
-		padding: 10px;
+	.landing-link {
+		font-size: 1.5em;
 	}
 
-	.subtitle {
-		width: 145px;
-		font-size: 16px;
-		letter-spacing: 2px;
-	}
-
-	.index-header h1 {
-		font-size: 36px;
-		margin-top: 10px;
-	}
-
-	.index-header-tile {
-		width: 40%;
-		height: 80px;
-	}
-
-	.index-header-tile.webDev {
-		padding-left: 20px;
-	}
-
-	.index-header-tile.photography {
-		padding-right: 20px; 
-	}
-
-	.divider {
-		height: 55px;
-	}
-
-	.index-header-description {
-		width: 95%;
-		text-align: center;
+	.nav-name {
+		letter-spacing: 4px;
 	}
 
 	.social-media {
@@ -212,15 +246,9 @@ p {
 		font-size: 24px;
 	}
 
-	.social-icon.fa-linkedin-in {
-		font-size: 24px;
-		width: 22px;
-		height: 22px;
-		padding: 0;
+	.linkedin-box {
+		width: 30px;
+		height: 30px;
 	}
 
 }
-
-
-
-
