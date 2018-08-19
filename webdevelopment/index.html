@@ -25,28 +25,28 @@
 <body>
 	<nav>
 		<div class="nav-banner background-dark">
-			<a href="../" class="nav-name light-text">Alex Warnes Portfolio</a>
+			<a href="../" class="nav-name white">Alex Warnes Portfolio</a>
 		</div>
 		<div class="nav-bar">
-			<a href="/" class="nav-link nl-webdev dark-text">
+			<a href="/" class="nav-link nl-webdev dkblue">
 				<div class="nav-tab current-tab-webdev">
 					<i class="material-icons">code</i>
 					Web Dev
 				</div>
 			</a>
-			<a href="../photography/" class="nav-link nl-photography dark-text">
+			<a href="../photography/" class="nav-link nl-photography dkblue">
 				<div class="nav-tab">
 					<i class="material-icons">camera</i>
 					Photography
 				</div>
 			</a>
-			<a href="../resources/" class="nav-link nl-resources dark-text">
+			<a href="../resources/" class="nav-link nl-resources dkblue">
 				<div class="nav-tab">
 					<i class="material-icons">school</i>
 					Resources
 				</div>
 			</a>
-			<a href="../about/" class="nav-link nl-about dark-text">
+			<a href="../about/" class="nav-link nl-about dkblue">
 				<div class="nav-tab">
 					<i class="material-icons">recent_actors</i>
 					About Me
@@ -56,40 +56,157 @@
 	</nav>
 	<header class="webdev-header content-header" role="banner">
 			<h1>Web Development Portfolio</h1>
-			<p>Combining technology, creativity, and useability to help people in big and small ways.</p>
-	</header>
-	<!-- Working through a full-stack program emphasizing a11y-friendly, responsive design using JavaScript (ES6), React, jQuery, HTML5, and CSS3 on the front-end, Node, Express, and MongoDB on the back-end. -->
-	<main>
-	
-		<div class="error">
-				<i class="material-icons display-icon error-icon">error_outline</i>
-			<p>Sorry for the hiccup! I'm updating major branches of the site and haven't made it here yet.</p>
-			<p>Feel free to connect with me on any other platform, as I'm always interested in new projects or feedback. Thanks for visiting!</p>
-			<div role="region" class="introTile social-media">
-
-				<a href="mailto:alex.s.warnes@gmail.com?subject=Contact%20Email" aria-label="Email" rel="noopener noreferrer">
-					<i class="far fa-envelope social-icon"></i>
-				</a>
-
-				<a href="https://github.com/AlexWarnes" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
-					<i class="fab fa-github social-icon"></i>
-				</a>
-
-				<a href="https://www.instagram.com/alexwarnesphotos/" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
-					<i class="fab fa-instagram social-icon"></i>
-				</a>
-
-				<a href="https://www.linkedin.com/in/alexwarnes/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
-					<i class="fab fa-linkedin-in social-icon"></i>
-				</a>
-
-				<a href="https://twitter.com/a_warnes" target="_blank" aria-label="Twitter" rel="noopener noreferrer">
-					<i class="fab fa-twitter social-icon"></i>
-				</a>
-
+			<p>Combining technology, creativity, and useability to help people in big and small ways.</p>	
+			<p class="tools-title">Current Toolkit</p>
+			<div class="code-box">
+				<p class="code-tag">HTML5</p>
+				<p class="code-tag">CSS3</p>
+				<p class="code-tag">JavaScript ES6</p>
+				<p class="code-tag">jQuery</p>
+				<p class="code-tag">React</p>
+				<p class="code-tag">Redux</p>
+				<p class="code-tag">Node</p>
+				<p class="code-tag">Express</p>
+				<p class="code-tag">MongoDB</p>
 			</div>
-		</div>
-		
+	</header>
+
+	<main>
+
+		<div class="section-break"><i class="material-icons break-icon">code</i></div>
+
+		<section class="proj-container" role="region"> 
+			<div class="proj-card">
+				<h2 class="proj-title">APOD Explorer</h2>
+				<div class="code-box">
+					<p class="code-tag">HTML5</p>
+					<p class="code-tag">CSS3</p>
+					<p class="code-tag">JavaScript ES6</p>
+					<p class="code-tag">jQuery</p>
+				</div>
+				<p class="proj-description">
+						Explore NASA Astronomy Picture of the Day (APOD) archives, discover classic photos, and get inspired by simply scrolling. The official APOD site is difficult to quickly and easily browse through old APODs. This project solves that problem using the NASA Open Data APOD API to generate random APODs from the archives, giving the user a new experience on every visit.
+				</p>
+				<div class="link-box">
+					<a href="https://www.apodexplorer.com" class="proj-link proj-link-visit btn-link background-metal white" target="_blank" aria-label="APOD Explorer" rel="noopener noreferrer">
+						<i class="material-icons proj-link-icon">open_in_new</i>
+						Visit
+					</a>
+					<a href="https://github.com/AlexWarnes/APODexplorer" class="proj-link proj-link-code btn-link background-metal white" target="_blank" aria-label="APOD Explorer Code" rel="noopener noreferrer">
+						Source
+						<i class="material-icons proj-link-icon">code</i>
+						Code
+					</a>
+				</div>
+			</div>
+			<div class="proj-img-card">
+				<img src="../assets/APODexplorer.png" alt="APOD Explorer Site" class="proj-img">
+			</div>
+		</section>
+
+		<div class="section-break"><i class="material-icons break-icon">code</i></div>
+
+		<section class="proj-container" role="region"> 
+			<div class="proj-card">
+				<h2 class="proj-title">Travellists</h2>
+				<div class="code-box">
+					<p class="code-tag">HTML5</p>
+					<p class="code-tag">CSS3</p>
+					<p class="code-tag">JavaScript ES6</p>
+					<p class="code-tag">jQuery</p>
+					<p class="code-tag">Node</p>
+					<p class="code-tag">Express</p>
+					<p class="code-tag">MongoDB</p>
+				</div>
+				<p class="proj-description">
+						Inspired by good and bad travel recommendations, Travellists is a platform to find recommendations for places to go from people whose travel-styles match your own. You can create lists after a trip, or prepare for an upcoming trip by finding lists from travelers. Get the right lists for you by finding authors whose descriptions and travel history seem like your cup of tea (or coffee, whichever you prefer).
+				</p>
+				<div class="link-box">
+					<a href="https://travellists.herokuapp.com" class="proj-link proj-link-visit btn-link background-metal white" target="_blank" aria-label="Travellists" rel="noopener noreferrer">
+						<i class="material-icons proj-link-icon">open_in_new</i>
+						Visit
+					</a>
+					<a href="https://github.com/AlexWarnes/Travellists" class="proj-link proj-link-code btn-link background-metal white" target="_blank" aria-label="Travellists Code" rel="noopener noreferrer">
+						Source
+						<i class="material-icons proj-link-icon">code</i>
+						Code
+					</a>
+				</div>
+			</div>
+			<div class="proj-img-card">
+				<img src="../assets/Travellists_2.png" alt="Travellists Site" class="proj-img">
+			</div>
+		</section>
+			
+		<div class="section-break"><i class="material-icons break-icon">code</i></div>
+	
+		<section class="proj-container" role="region"> 
+			<div class="proj-card">
+				<h2 class="proj-title">Jargonator</h2>
+				<div class="code-box">
+					<p class="code-tag">HTML5</p>
+					<p class="code-tag">CSS3</p>
+					<p class="code-tag">JavaScript ES6</p>
+					<p class="code-tag">jQuery</p>
+					<p class="code-tag">Node</p>
+				</div>
+				<p class="proj-description">
+					A simple expiremental project to practice the basics of Node.js and connecting the back-end to the front-end. Jargonator uses the Faker package to produce an almost limitless variety of funny catchphrases, and serve them to the Jargonator on request.
+				</p>
+				<div class="link-box">
+					<a href="https://jargonator.herokuapp.com" class="proj-link proj-link-visit btn-link background-metal white" target="_blank" aria-label="Jargonator" rel="noopener noreferrer">
+						<i class="material-icons proj-link-icon">open_in_new</i>
+						Visit
+					</a>
+					<a href="https://github.com/AlexWarnes/Jargonator" class="proj-link proj-link-code btn-link background-metal white" target="_blank" aria-label="Jargonator Code" rel="noopener noreferrer">
+						Source
+						<i class="material-icons proj-link-icon">code</i>
+						Code
+					</a>
+				</div>
+			</div>
+			<div class="proj-img-card">
+				<img src="../assets/Jargonator.png" alt="Jargonator Site" class="proj-img">
+			</div>
+		</section>
+
+		<div class="section-break"><i class="material-icons break-icon">code</i></div>
+
+		<section class="proj-container" role="region"> 
+			<div class="proj-card">
+				<h2 class="proj-title">Almagest</h2>
+				<div class="disclaimer">
+					<i class="material-icons">error_outline</i>
+					<p class="disclaimer-text">Disclaimer: While you can still view this site, the conditions information is unavailable while the API requests are updated.</p>
+				</div>
+				
+				<div class="code-box">
+					<p class="code-tag">HTML5</p>
+					<p class="code-tag">CSS3</p>
+					<p class="code-tag">JavaScript ES6</p>
+					<p class="code-tag">jQuery</p>
+				</div>
+				<p class="proj-description">
+					Almagest is a three-step tool to help plan stargazing or astrophotography outings. Named after one of the most influential scientific texts of all time, Almagest provides light pollution data, sunrise and sunset times, moonrise and moonset times, and forecast data in one place, alleviating the hassle of checking multiple sites.
+				</p>
+				<div class="link-box">
+					<a href="https://alexwarnes.github.io/Almagest/" class="proj-link proj-link-visit btn-link background-metal white" target="_blank" aria-label="Almagest" rel="noopener noreferrer">
+						<i class="material-icons proj-link-icon">open_in_new</i>
+						Visit
+					</a>
+					<a href="https://github.com/AlexWarnes/Almagest" class="proj-link proj-link-code btn-link background-metal white" target="_blank" aria-label="Almagest Code" rel="noopener noreferrer">
+						Source
+						<i class="material-icons proj-link-icon">code</i>
+						Code
+					</a>
+				</div>
+			</div>
+			<div class="proj-img-card">
+				<img src="../assets/Almagest.png" alt="Almagest Site" class="proj-img">
+			</div>
+		</section>
+
+		<div class="section-break"><i class="material-icons break-icon">code</i></div>
 	</main>
 </body>
 </html>
