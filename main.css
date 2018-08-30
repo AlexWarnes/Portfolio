@@ -123,7 +123,7 @@ a.nav-name {
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 100;
-	letter-spacing: 7px;
+	letter-spacing: 4px;
 }
 
 .nav-bar {
@@ -132,6 +132,7 @@ a.nav-name {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: flex-end;
+	font-size: .8em;
 	box-shadow: 0 2px 4px #222c3a50;
 	color: #252C3A;
 }
@@ -187,7 +188,7 @@ a.nav-name {
 .landing-link {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 100;
-	font-size: 2.5em;
+	font-size: 1.5em;
 	letter-spacing: 5px;
 	color: white;
 }
@@ -267,9 +268,9 @@ a.nav-name {
 
 .social-media {
 	justify-content: space-between;
-	width: 350px;
 	margin: 0 auto;
-	font-size: 30px;
+	width: 85%;
+	font-size: 1.5em;
 }
 
 .social-icon {
@@ -420,27 +421,21 @@ a.nav-name {
 
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 640px) {
 	.landing-link {
-		font-size: 1.5em;
+		font-size: 2.5em;
 	}
 
 	.nav-name {
-		letter-spacing: 4px;
+		letter-spacing: 7px;
 	}
 
 	.nav-bar {
-		font-size: .8em;
+		font-size: 1em;
 	}
 
 	.social-media {
-		width: 85%;
-		font-size: 24px;
+		width: 350px;
+		font-size: 2em;
 	}
-
-	.linkedin-box {
-		width: 30px;
-		height: 30px;
-	}
-
 }
