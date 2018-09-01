@@ -28,7 +28,7 @@ a, i {
 }
 
 .btn-link {
-    padding: 15px 25px;
+    padding: 15px 15px;
 	box-shadow: 4px 4px 8px #222c3a60;
 }
 
@@ -74,6 +74,10 @@ a, i {
 
 .metal {
 	color: #272727;
+}
+
+.inactive {
+	color: #FFFFFF88;
 }
 
 .background-white {
@@ -127,15 +131,65 @@ a.nav-name {
 }
 
 .nav-bar {
+	display: flex;
+	justify-content: flex-start;
+	position: fixed;
+    background: white;
 	width: 100%;
-	height: 50px;
+	bottom: 0;
+	box-shadow: 0 -2px 4px #222c3a50;
+	font-size: .8em;
+	z-index: 100;
+}
+
+.nav-bar-links {
+	width: calc(100% - 60px);
+	height: 60px;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: flex-end;
-	font-size: .8em;
-	box-shadow: 0 2px 4px #222c3a50;
 	color: #252C3A;
 }
+
+.burger-box {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.burger {
+	display: block;
+}
+
+.burger-layer {
+	width: 35px;
+	height: 2px;
+	background-color: #FFFFFF;
+	margin-bottom: 6px;
+	position: relative;
+	top: 0;
+	transition: all ease-in-out .6s;
+}
+
+.burger.open .burger-layer:nth-child(2) {
+	width: 0;
+	opacity: 0;
+}
+
+.burger.open .burger-layer:nth-child(1) {
+	transform: rotate(-225deg);
+	top: 8px;
+}
+.burger.open .burger-layer:nth-child(3) {
+	transform: rotate(225deg);
+	top: -8px;
+}
+
+
 
 .nav-link {
 	width: 25%;
@@ -170,6 +224,53 @@ a.nav-name {
 .current-tab-about {border-bottom: 2px solid #55B392;}
 .nl-about:hover i {color: #55b392;}
 .nl-about:hover .nav-tab {border-bottom: 2px solid #55b392;}
+
+/* .menu {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 100%;
+	padding: 60px 10%;
+} */
+.menu {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	top: 100%;
+	z-index: 90;
+	width: 100%;
+	height: 100%;
+	padding: 60px 10%;
+	transition: all ease-out .6s;
+}
+
+.menu.open {
+	top: 0;
+}
+
+.menu-link {
+	display: flex;
+	align-items: center;
+	font-size: 1.4em;
+}
+
+.menu-link i {
+	margin-right: 20px;
+	font-size: 1.4em;
+}
+
+.menu-link:hover {
+	color: #1DA1F2;
+}
+
+.menu-link.inactive:hover {
+	color: #272727;
+	cursor: default;
+}
 
 /*===================================================*/
 /* LANDING PAGE */
@@ -262,15 +363,17 @@ a.nav-name {
 /* SOCIAL MEDIA BAR */
 /*===================================================*/
 
-.social-media a {
-	color: #242c3a;
-}
-
 .social-media {
+	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin: 0 auto;
-	width: 85%;
+	padding: 20px;
+	width: 100%;
+	max-width: 350px;
+	height: 20%;
 	font-size: 1.5em;
+	text-align: center;
 }
 
 .social-icon {
@@ -422,6 +525,10 @@ a.nav-name {
 
 
 @media only screen and (min-width: 640px) {
+	.content-header {
+		padding-top: 100px;
+	}
+	
 	.landing-link {
 		font-size: 2.5em;
 	}
@@ -432,10 +539,25 @@ a.nav-name {
 
 	.nav-bar {
 		font-size: 1em;
+		top: 0;
+		bottom: unset;
+		box-shadow: 0 2px 4px #222c3a50;
+	}
+
+	.menu {
+		top: -100%;
+	}
+
+	.menu.open {
+		top: 0;
 	}
 
 	.social-media {
 		width: 350px;
 		font-size: 2em;
+	}
+
+	.btn-link {
+		padding: 15px 25px;
 	}
 }

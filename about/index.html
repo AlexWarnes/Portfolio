@@ -4,7 +4,7 @@
 <head>
 	<!-- METADATA -->
 
-	<meta charset="utf-8" name="description" content="The portfolio of Alex Warnes, showcasing full-stack web applications, custom designed websites, and a gallery of landscape and astro photography.">
+	<meta charset="utf-8" name="description" content="Portfolio showcasing full-stack web applications, gallery of landscape, astro, and travel photography, and a collection of free resources for new developers.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alex Warnes Portfolio</title>
 	<!-- TO DO: <link rel="icon" href="#"> -->
@@ -23,11 +23,15 @@
 </head>
 
 <body>
-	<nav>
-		<div class="nav-banner background-dark">
-			<a href="/" class="nav-name white">Alex Warnes Portfolio</a>
+	<nav class="nav-bar">
+		<div class="burger-box background-metal white">
+			<div class="burger">
+				<div class="burger-layer"></div>
+				<div class="burger-layer"></div>
+				<div class="burger-layer"></div>
+			</div>
 		</div>
-		<div class="nav-bar">
+		<div class="nav-bar-links">
 			<a href="../webdevelopment/" class="nav-link nl-webdev dkblue">
 				<div class="nav-tab">
 					<i class="material-icons">code</i>
@@ -37,23 +41,65 @@
 			<a href="../photography/" class="nav-link nl-photography dkblue">
 				<div class="nav-tab">
 					<i class="material-icons">camera</i>
-					Photography
+					Photos
 				</div>
 			</a>
 			<a href="../resources/" class="nav-link nl-resources dkblue">
 				<div class="nav-tab">
 					<i class="material-icons">school</i>
-					Resources
+					Learn
 				</div>
 			</a>
 			<a href="#" class="nav-link nl-about dkblue">
 				<div class="nav-tab current-tab-about">
 					<i class="material-icons">recent_actors</i>
-					About Me
+					About
 				</div>
 			</a>
 		</div>
 	</nav>
+	<section class="menu background-metal white" role="region">
+		<a href="/" class="white menu-link">
+			<i class="material-icons">home</i>
+			<h3>Home</h3>
+		</a>
+		<a href="#" class="inactive menu-link">
+			<i class="material-icons">blur_on</i>
+			<h3>More</h3>
+		</a>
+		<a href="#" class="inactive menu-link">
+			<i class="material-icons">settings_input_component</i>
+			<h3>Features</h3>
+		</a>
+		<a href="#" class="inactive menu-link">
+			<i class="material-icons">games</i>
+			<h3>Soon</h3>
+		</a>
+
+		<div role="region" class="social-media">
+
+			<a href="mailto:alex.s.warnes@gmail.com?subject=Contact%20Email" class="white" aria-label="Email" rel="noopener noreferrer">
+				<i class="far fa-envelope social-icon"></i>
+			</a>
+
+			<a href="https://github.com/AlexWarnes" target="_blank" class="white" aria-label="GitHub" rel="noopener noreferrer">
+				<i class="fab fa-github social-icon"></i>
+			</a>
+
+			<a href="https://www.instagram.com/alexwarnesphotos/" target="_blank" class="white" aria-label="Instagram" rel="noopener noreferrer">
+				<i class="fab fa-instagram social-icon"></i>
+			</a>
+
+			<a href="https://www.linkedin.com/in/alexwarnes/" target="_blank" class="white" aria-label="LinkedIn" rel="noopener noreferrer">
+				<i class="fab fa-linkedin-in social-icon"></i>
+			</a>
+
+			<a href="https://twitter.com/a_warnes" target="_blank" class="white" aria-label="Twitter" rel="noopener noreferrer">
+				<i class="fab fa-twitter social-icon"></i>
+			</a>
+
+		</div>
+	</section>
 	<header class="about-header content-header" role="banner">
 			<h1>About Me</h1>
 			<p>Serial hobbyist interested in technology, travel, space, and international relations. Always learning.</p>
@@ -89,5 +135,8 @@
 				</div>
 		</div>
 	</main>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../app.js"></script>
 </body>
 </html>
