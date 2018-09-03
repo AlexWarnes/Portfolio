@@ -7,10 +7,23 @@ body {
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1em;
+	line-height: 1.4em;
+
 }
 
 .content-header {
-    padding: 40px 40px 60px 10%;
+	padding: 40px 40px 60px 10%;
+	background-color: #272727;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #EAECF2;
+	box-shadow: 0 4px 8px #00000028;
+	min-height: 75vh;
+}
+
+.content-header>p, .content-header>h1 {
+	text-shadow: 0 0 10px #272727;
+	line-height: 1.4em;
 }
 
 h1, h2, h3, h4 {
@@ -133,7 +146,7 @@ a>.nav-tab>i {
 .nav-name {
 	margin: 0 60px 0 0;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1.5em;
+	font-size: 1em;
 	font-weight: 100;
 	letter-spacing: 4px;
 }
@@ -413,7 +426,15 @@ a>.nav-tab>i {
 /*===================================================*/
 
 .webdev-header {
+	background-color: none;
 	background-color: #272727;
+	/* Cropped photo ideal for mobile */
+	background-image: 
+		linear-gradient(to bottom, #272727C8 33%, #27272700), 
+		url('/assets/tower-horizontal.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	color: #EAECF2;
 	box-shadow: 0 4px 8px #00000028;
 }
@@ -449,7 +470,8 @@ a>.nav-tab>i {
     margin: 4px;
     padding: 8px;
     border-radius: 3px;
-    font-size: .8em;
+	font-size: .8em;
+	line-height: 1em;
 }
 
 .proj-container {
@@ -511,6 +533,45 @@ a>.nav-tab>i {
 	color: #ff0000;
 }
 
+/*===================================================*/
+/* PHOTOGRAPHY PAGE */
+/*===================================================*/
+
+.photography-header {
+	background-image: 
+		linear-gradient(to right, #272727A5, #27272700), 	
+		url('https://instagram.com/p/BVQQcr2FeLX/media/?size=l');
+	background-image: 
+		linear-gradient(to bottom, #272727A5, #27272700), 	
+		url('https://instagram.com/p/BVQQcr2FeLX/media/?size=l');
+	background-position: center;
+}
+
+/*===================================================*/
+/* RESOURCES PAGE */
+/*===================================================*/
+
+.resources-header {
+	background-image: 
+		linear-gradient(to top, #27272755, #27272755), 	
+		url('https://instagram.com/p/BaaTRu1lbHl/media/?size=l');
+	background-position: right;
+}
+
+/*===================================================*/
+/* ABOUT PAGE */
+/*===================================================*/
+.about-header {
+	background-image: 
+	linear-gradient(to bottom, #232C3AC5 2%, #27272700),
+	url('https://instagram.com/p/BINpGFjDvsw/media/?size=l');
+	background-position: right;
+}
+
+.about-header>p, .about-header>h1 {
+	text-shadow: unset;
+}
+
 #error-js {
 	display: none;
 }
@@ -531,8 +592,16 @@ a>.nav-tab>i {
 }
 
 @media only screen and (min-width: 640px) {
+	h1 {
+		font-size: 2.5em;
+	}
+
 	.content-header {
 		padding-top: 100px;
+	}
+
+	.content-header>p {
+		max-width: 66%;
 	}
 
 	.landing-header {
@@ -544,8 +613,16 @@ a>.nav-tab>i {
 		font-size: 2.5em;
 	}
 
+	.webdev-header {
+		background-image: 
+			linear-gradient(to right, #272727C8, #27272700), 
+			url('https://instagram.com/p/BeQv4zcloTZ/media/?size=l');
+			background-position: bottom;
+	}
+
 	.nav-name {
 		letter-spacing: 7px;
+		font-size: 1.4em;
 	}
 
 	.nav-bar {
