@@ -540,7 +540,7 @@ a>.nav-tab>i {
 .photography-header {
 	background-image: 
 		linear-gradient(to right, #272727A5, #27272700), 	
-		url('https://scontent-iad3-1.cdninstagram.com/vp/772d8cf63ecac3f9130b7fe9191ec693/5C2E1C47/t51.2885-15/e35/19052293_1922282934680185_374290139100217344_n.jpg');
+		url('/assets/parisMosque.jpg');
 	background-position: center;
 }
 
@@ -551,7 +551,7 @@ a>.nav-tab>i {
 .resources-header {
 	background-image: 
 		linear-gradient(to top, #27272755, #27272755), 	
-		url('https://instagram.com/p/BaaTRu1lbHl/media/?size=l');
+		url('/assets/shenandoahAndromeda.jpg');
 	background-position: right;
 }
 
@@ -561,7 +561,7 @@ a>.nav-tab>i {
 .about-header {
 	background-image: 
 	linear-gradient(to bottom, #232C3AC5 2%, #27272700),
-	url('https://instagram.com/p/BINpGFjDvsw/media/?size=l');
+	url('/assets/olympicTrail.jpg');
 	background-position: right;
 }
 
@@ -613,7 +613,7 @@ a>.nav-tab>i {
 	.webdev-header {
 		background-image: 
 			linear-gradient(to right, #272727C8, #27272700), 
-			url('https://instagram.com/p/BeQv4zcloTZ/media/?size=l');
+			url('/assets/tower-full.jpg');
 			background-position: bottom;
 	}
 
