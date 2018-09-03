@@ -30,14 +30,24 @@
 			<link rel="stylesheet" href="./gridrules.css">
 			<link rel="stylesheet" href="./main.css">
 </head>
-
 <body>
 
-	<nav class="nav-banner background-dark">
-		<a href="/" class="nav-name white">Alex Warnes Portfolio</a>
+	<nav class="nav-bar background-dkblue">
+		<div class="burger-box background-dkblue white">
+			<div class="burger">
+				<div class="burger-layer"></div>
+				<div class="burger-layer"></div>
+				<div class="burger-layer"></div>
+			</div>
+		</div>
+		<div class="nav-name-box">
+			<p class="nav-name white">Alex Warnes Portfolio</p>
+		</div>
 	</nav>
-	
-	<header role="banner" class="landing-header">
+
+	<div id="menu-js"></div>
+
+	<header role="banner" class="landing-header background-white">
 
 		<div class="introTile">
 			<h1 class="landing-link ll-webdev"><a href="./webdevelopment">WEB DEVELOPMENT</a></h1>
@@ -55,7 +65,7 @@
 			<h1 class="landing-link ll-about"><a href="./about/">ABOUT ME</a></h1>
 		</div>
 
-		<div role="region" class="social-media">
+		<div role="region" class="social-media introTile">
 
 			<a href="mailto:alex.s.warnes@gmail.com?subject=Contact%20Email" class="dkblue" aria-label="Email" rel="noopener noreferrer">
 				<i class="far fa-envelope social-icon"></i>
@@ -140,6 +150,7 @@
 		</section>
 
 	</main>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./app.js"></script>
 </body>
 </html>
