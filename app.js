@@ -9,7 +9,8 @@ const STARTUP = () => {
     loadMenu();
     setCurrentView();
     highlightCurrentView();
-    toggleMenu();
+    burgerOnClick();
+    menuLinkOnClick();
     loadError();
 };
 
@@ -152,12 +153,22 @@ const toggleAriaHidden = () => {
 };
 
 const toggleMenu = () => {
+    $('.burger, .menu').toggleClass('open');
+    toggleAriaHidden();
+}
+
+const burgerOnClick = () => {
     $('.burger-box').on('click', (e) => {
         e.preventDefault();
-        $('.burger, .menu').toggleClass('open');
-        toggleAriaHidden();
+        toggleMenu();
     });
 };
+
+const menuLinkOnClick = () => {
+    $('.menu-link').on('click', (e) => {
+        toggleMenu();
+    })
+}
 
 const loadError = () => {
     $('#error-js').html(`
