@@ -19,6 +19,7 @@ function STARTUP() {
         nextPhotoOnClick();
         prevPhotoOnClick();
         closePhotoOnClick();
+        keyboardControls();
     }
 };
 
@@ -212,15 +213,8 @@ function loadError() {
     $('#error-js').slideToggle();
 };
 
-function loadGrid(data) {
-    data.map((photo, index) => {
-        let thumb = renderThumbnail(photo, index);
-        $('.photo-grid').append(thumb);
-        $(`#photo-${index}`).on('load', function(){
-            $(`#photo-${index}`).fadeIn(600);
-        })    
-    });
-}
+//========== PHOTOGRAPHY PAGE & GALLERY CONTROLS ==========
+// ========================================================
 
 function renderThumbnail(photo, index) {
     return `
@@ -229,16 +223,12 @@ function renderThumbnail(photo, index) {
         </div>`;
 }
 
-function changeToLargeUrl(instaUrl) {
-    return instaUrl.slice(0, -1) + 'l';
-}
-
 function openGallery() {
-    $('.pictureFrame-js').fadeIn().css('display', 'flex');
+    $('.gallery-js').fadeIn().css('display', 'flex');
 }
 
 function closeGallery() {
-    $('.pictureFrame-js').fadeOut();
+    $('.gallery-js').fadeOut();
     $('.photo').attr('src', '');
     $('.photo').attr('alt', '');
 }
@@ -247,18 +237,8 @@ function displayFullRes(data){
     $('.photo').attr('src', data.fullResURL);
     $('.photo').attr('alt', data.alt);
     $('.photo').on('load', () => {
-        $('.photo').fadeIn(200);
+        $('.photo').fadeIn(400);
     });
-    //Anytime a full res photo is showing, we listen for arrows
-    switchPhotoOnArrow();
-}
-
-function thumbnailOnClick() {
-    $('.photo-thumb').on('click', (e) => {
-        let selectedPhoto = getThisPhotoData($(e.currentTarget).attr('src'));
-        openGallery();
-        displayFullRes(selectedPhoto);
-    })
 }
 
 function getThisPhotoData(currentPhoto) {
@@ -274,8 +254,8 @@ function getNextPhotoData(currentPhoto) {
     } else {
         nextIndex = currentIndex + 1;
     } 
-    console.log(`CURRENT INDEX: ${currentIndex}`);
-    console.log(`NEXT INDEX: ${nextIndex}`);
+    console.log(`%cCURRENT INDEX: ${currentIndex}`, "color: green; font-weight: bold;");
+    console.log(`%cNEXT INDEX: ${nextIndex}`, "font-weight: bold;");
     return galleryJSON[nextIndex];
 }
 
@@ -287,25 +267,49 @@ function getPrevPhotoData(currentPhoto) {
     } else {
         prevIndex = currentIndex - 1;
     } 
-    console.log(`CURRENT INDEX: ${currentIndex}`);
-    console.log(`PREV INDEX: ${prevIndex}`);
+    console.log(`%cCURRENT INDEX: ${currentIndex}`, "color: green; font-weight: bold;");
+    console.log(`%cPREV INDEX: ${prevIndex}`, "font-weight: bold;");
     return galleryJSON[prevIndex];
+}
+
+function showNextPhoto() {
+    let nextPhoto = getNextPhotoData($('.photo').attr('src'));
+    displayFullRes(nextPhoto);
+}
+
+function showPrevPhoto() {
+    let prevPhoto = getPrevPhotoData($('.photo').attr('src'));
+    displayFullRes(prevPhoto);
+}
+
+function loadGrid(data) {
+    data.map((photo, index) => {
+        let thumb = renderThumbnail(photo, index);
+        $('.photo-grid').append(thumb);
+        $(`#photo-${index}`).on('load', () => {
+            $(`#photo-${index}`).fadeIn(600);
+        });
+    });
+}
+
+function thumbnailOnClick() {
+    $('.photo-thumb').on('click', (e) => {
+        let selectedPhoto = getThisPhotoData($(e.currentTarget).attr('src'));
+        openGallery();
+        displayFullRes(selectedPhoto);
+    })
 }
 
 function nextPhotoOnClick() {
     $('.next-photo-js').on('click', (e) => {
-        console.log("NEXT PLZ")
-        let nextPhoto = getNextPhotoData($('.photo').attr('src'));
-        displayFullRes(nextPhoto);
-    })
+        showNextPhoto();
+    });
 }
 
 function prevPhotoOnClick() {
     $('.prev-photo-js').on('click', (e) => {
-        console.log("PREV PLZ")
-        let prevPhoto = getPrevPhotoData($('.photo').attr('src'));
-        displayFullRes(prevPhoto);
-    })
+        showPrevPhoto();
+    });
 }
 
 function closePhotoOnClick() { 
@@ -314,23 +318,23 @@ function closePhotoOnClick() {
     });
 }
 
-function switchPhotoOnArrow(){
-    console.log('LISTENING FOR ARROWS')
-    $('body').one('keydown', (e) => {
+function keyboardControls(){
+    $('body').one('keyup', (e) => {
         let keyName = e.key;
-        console.log(keyName);
+        //in each case, reset the listener after a key is pressed
         switch(keyName){
             case 'ArrowRight':
-                let nextPhoto = getNextPhotoData($('.photo').attr('src'));
-                return displayFullRes(nextPhoto);
+                keyboardControls();
+                return showNextPhoto();
             case 'ArrowLeft':
-                let prevPhoto = getPrevPhotoData($('.photo').attr('src'));
-                return displayFullRes(prevPhoto);
+                keyboardControls();
+                return showPrevPhoto();
             case 'Escape':
+                keyboardControls();
                 return closeGallery();
             default:
-                //In case any other key is pressed, we continue listening for arrows
-                return switchPhotoOnArrow();
+                //In case any other key is pressed, reset the listener
+                return keyboardControls();
         }
     });    
 } 
