@@ -572,7 +572,7 @@ a>.nav-tab>i {
 .gallery-js {
 	display: none;
 	position: fixed;
-    top: 0;
+    bottom: 60px;
     left: 0;
 	width: 100%;
 	height: calc(100vh - 60px);
@@ -592,9 +592,19 @@ a>.nav-tab>i {
     bottom: 0;
 }
 
+.photo-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 1080px;
+	height: calc(100% - 60px);
+	text-align: center;
+}
+
 .photo {
 	max-width: 100%;
-	max-height: calc(100% - 60px);
+	max-height: calc(100vh - 120px);
 	background-color: #000000;
 }
 
