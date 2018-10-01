@@ -74,7 +74,7 @@ function loadMenu() {
         </a>
         <a href="/webdevelopment/" class="white menu-link">
             <i class="material-icons">code</i>
-            <h3>Web Dev</h3>
+            <h3>Web Development</h3>
         </a>
             <a href="/webdevelopment/#APODexplorer" class="white menu-link sub-link">APOD Explorer</a>
             <a href="/webdevelopment/#Travellists" class="white menu-link sub-link">Travellists</a>
@@ -86,7 +86,7 @@ function loadMenu() {
         </a>
         <a href="/resources/" class="white menu-link">
             <i class="material-icons">school</i>
-            <h3>Learn</h3>
+            <h3>Resources</h3>
         </a>
             <a href="#" class="white menu-link sub-link inactive">Coding Resources</a>
             <a href="#" class="white menu-link sub-link inactive">Web Development 101</a>
@@ -94,7 +94,7 @@ function loadMenu() {
             <a href="#" class="white menu-link sub-link inactive">Astrophotography 101</a>
         <a href="/about/" class="white menu-link">
             <i class="material-icons">recent_actors</i>
-            <h3>About</h3>
+            <h3>About Me</h3>
         </a>
     
         <div role="region" class="social-media">
