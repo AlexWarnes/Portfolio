@@ -76,6 +76,7 @@ function loadMenu() {
             <i class="material-icons">code</i>
             <h3>Web Development</h3>
         </a>
+            <a href="/webdevelopment/#f/StopandGo" class="white menu-link sub-link">f/StopandGo</a>
             <a href="/webdevelopment/#APODexplorer" class="white menu-link sub-link">APOD Explorer</a>
             <a href="/webdevelopment/#Travellists" class="white menu-link sub-link">Travellists</a>
             <a href="/webdevelopment/#Jargonator" class="white menu-link sub-link">Jargonator</a>
