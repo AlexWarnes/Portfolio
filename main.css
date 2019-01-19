@@ -556,10 +556,10 @@ a>.nav-tab>i {
 }
 
 .photo-thumb {
-	display: none;
 	cursor: pointer;
 	box-shadow: 2px 2px 4px #27272788;
-	transition: all ease .3s;
+  transition: all ease .3s;
+  /* TODO: animation */
 }
 
 .photo-thumb:hover {
@@ -573,12 +573,17 @@ a>.nav-tab>i {
 .gallery-js {
 	display: none;
 	position: fixed;
-    bottom: 60px;
-    left: 0;
+  bottom: 60px;
+  left: 0;
 	width: 100%;
 	height: calc(100vh - 60px);
 	background-color: #131313;
 	justify-content: center;
+}
+
+.gallery-js.open {
+  display: flex;
+  /* TODO: animation */
 }
 
 .gallery-control-panel {

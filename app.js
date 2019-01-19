@@ -4,158 +4,157 @@ const STATE = {
   currentView: undefined
 };
 
+const $ = (element) => document.querySelector(element);
+
 document.addEventListener('DOMContentLoaded', () => {
-  loadNavBar();
+  $('#navBar-js') ? loadNavBar() : null;
   loadMenu();
   setCurrentView();
   highlightCurrentView();
   burgerOnClick();
   menuLinkOnClick();
-  loadError();
+  $('#error-js') ? loadError() : null;
 
   if (STATE.currentView === 'photography') {
     loadGrid(galleryJSON);
     thumbnailOnClick();
-    nextPhotoOnClick();
-    prevPhotoOnClick();
+    // nextPhotoOnClick();
+    // prevPhotoOnClick();
     closePhotoOnClick();
-    keyboardControls();
+    // keyboardControls();
   }
 });
 
-const $ = (element) => document.querySelector(element);
-
 function loadNavBar() {
-    $('#navBar-js').innerHTML = `
-        <nav class="nav-bar background-white" role="navigation">
-            <div class="burger-box background-dkblue white">
-                <div class="burger">
-                    <div class="burger-layer"></div>
-                    <div class="burger-layer"></div>
-                    <div class="burger-layer"></div>
-                </div>
-            </div>
-            <div class="nav-bar-links">
-                <a href="/webdevelopment/" class="nav-link nl-webdev dkblue">
-                    <div class="nav-tab">
-                        <i class="material-icons">code</i>
-                        Web Dev
-                    </div>
-                </a>
-                <a href="/photography/" class="nav-link nl-photography dkblue">
-                    <div class="nav-tab">
-                        <i class="material-icons">camera</i>
-                        Photos
-                    </div>
-                </a>
-                <a href="/resources/" class="nav-link nl-resources dkblue">
-                    <div class="nav-tab">
-                        <i class="material-icons">school</i>
-                        Learn
-                    </div>
-                </a>
-                <a href="/about/" class="nav-link nl-about dkblue">
-                    <div class="nav-tab">
-                        <i class="material-icons">recent_actors</i>
-                        About
-                    </div>
-                </a>
-            </div>
-        </nav>
-    `;
-    // $('#navBar-js').fadeIn(400);
+  $('#navBar-js').innerHTML = `
+    <nav class="nav-bar background-white" role="navigation">
+      <div class="burger-box background-dkblue white">
+        <div class="burger">
+          <div class="burger-layer"></div>
+          <div class="burger-layer"></div>
+          <div class="burger-layer"></div>
+        </div>
+      </div>
+      <div class="nav-bar-links">
+        <a href="/webdevelopment/" class="nav-link nl-webdev dkblue">
+          <div class="nav-tab">
+            <i class="material-icons">code</i>
+            Web Dev
+          </div>
+        </a>
+        <a href="/photography/" class="nav-link nl-photography dkblue">
+          <div class="nav-tab">
+            <i class="material-icons">camera</i>
+            Photos
+          </div>
+        </a>
+        <a href="/resources/" class="nav-link nl-resources dkblue">
+          <div class="nav-tab">
+            <i class="material-icons">school</i>
+            Learn
+          </div>
+        </a>
+        <a href="/about/" class="nav-link nl-about dkblue">
+          <div class="nav-tab">
+            <i class="material-icons">recent_actors</i>
+            About
+          </div>
+        </a>
+      </div>
+    </nav>
+  `;
 };
 
 
 function loadMenu() {
-    $('#menu-js').innerHTML = `
+  $('#menu-js').innerHTML = `
     <section class="menu background-dkblue white" role="navigation" aria-hidden="true" aria-live="assertive">
-        <a href="/" class="white menu-link">
-            <i class="material-icons">home</i>
-            <h3>Home</h3>
+      <a href="/" class="white menu-link">
+        <i class="material-icons">home</i>
+        <h3>Home</h3>
+      </a>
+      <a href="/webdevelopment/" class="white menu-link">
+        <i class="material-icons">code</i>
+        <h3>Web Development</h3>
+      </a>
+      <a href="/webdevelopment/#f/StopandGo" class="white menu-link sub-link">f/StopandGo</a>
+      <a href="/webdevelopment/#APODexplorer" class="white menu-link sub-link">APOD Explorer</a>
+      <a href="/webdevelopment/#Travellists" class="white menu-link sub-link">Travellists</a>
+      <a href="/webdevelopment/#Jargonator" class="white menu-link sub-link">Jargonator</a>
+      <a href="/webdevelopment/#Almagest" class="white menu-link sub-link">Almagest</a>
+      <a href="/photography/" class="white menu-link">
+        <i class="material-icons">camera</i>
+        <h3>Photography</h3>
+      </a>
+      <a href="/resources/" class="white menu-link">
+        <i class="material-icons">school</i>
+        <h3>Resources</h3>
+      </a>
+      <a href="#" class="white menu-link sub-link inactive">Coding Resources</a>
+      <a href="#" class="white menu-link sub-link inactive">Web Development 101</a>
+      <a href="#" class="white menu-link sub-link inactive">Photography Resources</a>
+      <a href="#" class="white menu-link sub-link inactive">Astrophotography 101</a>
+      <a href="/about/" class="white menu-link">
+        <i class="material-icons">recent_actors</i>
+        <h3>About Me</h3>
+      </a>
+    
+      <div role="region" class="social-media">
+  
+        <a href="mailto:alex.s.warnes@gmail.com?subject=Contact%20Email" class="white" aria-label="Email" rel="noopener noreferrer">
+          <i class="far fa-envelope social-icon"></i>
         </a>
-        <a href="/webdevelopment/" class="white menu-link">
-            <i class="material-icons">code</i>
-            <h3>Web Development</h3>
+
+        <a href="https://github.com/AlexWarnes" target="_blank" class="white" aria-label="GitHub" rel="noopener noreferrer">
+          <i class="fab fa-github social-icon"></i>
         </a>
-            <a href="/webdevelopment/#f/StopandGo" class="white menu-link sub-link">f/StopandGo</a>
-            <a href="/webdevelopment/#APODexplorer" class="white menu-link sub-link">APOD Explorer</a>
-            <a href="/webdevelopment/#Travellists" class="white menu-link sub-link">Travellists</a>
-            <a href="/webdevelopment/#Jargonator" class="white menu-link sub-link">Jargonator</a>
-            <a href="/webdevelopment/#Almagest" class="white menu-link sub-link">Almagest</a>
-        <a href="/photography/" class="white menu-link">
-            <i class="material-icons">camera</i>
-            <h3>Photography</h3>
+
+        <a href="https://www.instagram.com/alexwarnesphotos/" target="_blank" class="white" aria-label="Instagram" rel="noopener noreferrer">
+          <i class="fab fa-instagram social-icon"></i>
         </a>
-        <a href="/resources/" class="white menu-link">
-            <i class="material-icons">school</i>
-            <h3>Resources</h3>
+
+        <a href="https://www.linkedin.com/in/alexwarnes/" target="_blank" class="white" aria-label="LinkedIn" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in social-icon"></i>
         </a>
-            <a href="#" class="white menu-link sub-link inactive">Coding Resources</a>
-            <a href="#" class="white menu-link sub-link inactive">Web Development 101</a>
-            <a href="#" class="white menu-link sub-link inactive">Photography Resources</a>
-            <a href="#" class="white menu-link sub-link inactive">Astrophotography 101</a>
-        <a href="/about/" class="white menu-link">
-            <i class="material-icons">recent_actors</i>
-            <h3>About Me</h3>
+
+        <a href="https://twitter.com/a_warnes" target="_blank" class="white" aria-label="Twitter" rel="noopener noreferrer">
+          <i class="fab fa-twitter social-icon"></i>
         </a>
-    
-        <div role="region" class="social-media">
-    
-            <a href="mailto:alex.s.warnes@gmail.com?subject=Contact%20Email" class="white" aria-label="Email" rel="noopener noreferrer">
-                <i class="far fa-envelope social-icon"></i>
-            </a>
-    
-            <a href="https://github.com/AlexWarnes" target="_blank" class="white" aria-label="GitHub" rel="noopener noreferrer">
-                <i class="fab fa-github social-icon"></i>
-            </a>
-    
-            <a href="https://www.instagram.com/alexwarnesphotos/" target="_blank" class="white" aria-label="Instagram" rel="noopener noreferrer">
-                <i class="fab fa-instagram social-icon"></i>
-            </a>
-    
-            <a href="https://www.linkedin.com/in/alexwarnes/" target="_blank" class="white" aria-label="LinkedIn" rel="noopener noreferrer">
-                <i class="fab fa-linkedin-in social-icon"></i>
-            </a>
-    
-            <a href="https://twitter.com/a_warnes" target="_blank" class="white" aria-label="Twitter" rel="noopener noreferrer">
-                <i class="fab fa-twitter social-icon"></i>
-            </a>
-    
-        </div>
+  
+      </div>
     </section>
-    `;
+  `;
 };
 
 function setCurrentView() {
-    let path = window.location.pathname;
+  let path = window.location.pathname;
 	let view;
-    path.includes('webdevelopment')
-        ? view = 'webdev'
-        : path.includes('photography')
-        ? view = 'photography'
-        : path.includes('resources')
-        ? view = 'resources'
-        : path.includes('about')
-        ? view = 'about'
-        : view = 'landing';
-    
-    STATE.currentView = view;
+  path.includes('webdevelopment')
+    ? view = 'webdev'
+    : path.includes('photography')
+    ? view = 'photography'
+    : path.includes('resources')
+    ? view = 'resources'
+    : path.includes('about')
+    ? view = 'about'
+    : view = 'landing';
+
+  STATE.currentView = view;
 };
 
 function highlightCurrentView() {
-    switch(STATE.currentView) {
-        case 'webdev':
-            return $('.nl-webdev>.nav-tab').classList.add('current-tab-webdev');
-        case 'photography':
-            return $('.nl-photography>.nav-tab').classList.add('current-tab-photography')
-        case 'resources':
-            return $('.nl-resources>.nav-tab').classList.add('current-tab-resources')
-        case 'about':
-            return $('.nl-about>.nav-tab').classList.add('current-tab-about')
-        default:
-            return null;
-    };
+  switch(STATE.currentView) {
+    case 'webdev':
+      return $('.nl-webdev>.nav-tab').classList.add('current-tab-webdev');
+    case 'photography':
+      return $('.nl-photography>.nav-tab').classList.add('current-tab-photography')
+    case 'resources':
+      return $('.nl-resources>.nav-tab').classList.add('current-tab-resources')
+    case 'about':
+      return $('.nl-about>.nav-tab').classList.add('current-tab-about')
+    default:
+      return null;
+  };
 };
 
 function toggleAriaHidden() {
@@ -219,35 +218,35 @@ function loadError() {
 //========== PHOTOGRAPHY PAGE & GALLERY CONTROLS ==========
 // ========================================================
 
-// function renderThumbnail(photo, index) {
-//     return `
-//         <div class="photo-tile">
-//             <img src="${photo.thumbURL}" alt="${photo.alt}" id="photo-${index}" class="photo-thumb">
-//         </div>`;
-// }
+function renderThumbnail(photo, index) {
+  return `
+    <div class="photo-tile">
+      <img src="${photo.thumbURL}" alt="${photo.alt}" id="photo-${index}" class="photo-thumb">
+    </div>`;
+}
 
-// function openGallery() {
-//     $('.gallery-js').fadeIn().css('display', 'flex');
-// }
+function openGallery() {
+  $('.gallery-js').classList.toggle('open');
+}
 
-// function closeGallery() {
-//     $('.gallery-js').fadeOut();
-//     $('.photo').attr('src', '');
-//     $('.photo').attr('alt', '');
-// }
+function closeGallery() {
+  $('.gallery-js').classList.toggle('open');
+  $('.photo').setAttribute('src', '');
+  $('.photo').setAttribute('alt', '');
+}
 
-// function displayFullRes(data){
-//     $('.photo').attr('src', data.fullResURL);
-//     $('.photo').attr('alt', data.alt);
-//     $('.photo').on('load', () => {
-//         $('.photo').fadeIn(400);
-//     });
-// }
+function displayFullRes(data){
+  $('.photo').setAttribute('src', data.fullResURL);
+  $('.photo').setAttribute('alt', data.alt);
+  // $('.photo').add('load', () => {
+  //     $('.photo').fadeIn(400);
+  // });
+}
 
-// function getThisPhotoData(currentPhoto) {
-//     let currentIndex = galleryJSON.findIndex(item => item.thumbURL === currentPhoto);
-//     return galleryJSON[currentIndex];
-// }
+function getThisPhotoData(currentPhoto) {
+  let currentIndex = galleryJSON.findIndex(item => item.thumbURL === currentPhoto);
+  return galleryJSON[currentIndex];
+}
 
 // function getNextPhotoData(currentPhoto) {
 //     let currentIndex = galleryJSON.findIndex(item => item.fullResURL === currentPhoto);
@@ -285,23 +284,21 @@ function loadError() {
 //     displayFullRes(prevPhoto);
 // }
 
-// function loadGrid(data) {
-//     data.map((photo, index) => {
-//         let thumb = renderThumbnail(photo, index);
-//         $('.photo-grid').append(thumb);
-//         $(`#photo-${index}`).on('load', () => {
-//             $(`#photo-${index}`).fadeIn(600);
-//         });
-//     });
-// }
+function loadGrid(data) {
+  data.map((photo, index) => {
+    let thumb = renderThumbnail(photo, index);
+    $('.photo-grid').innerHTML += thumb;
+  });
+}
 
-// function thumbnailOnClick() {
-//     $('.photo-thumb').on('click', (e) => {
-//         let selectedPhoto = getThisPhotoData($(e.currentTarget).attr('src'));
-//         openGallery();
-//         displayFullRes(selectedPhoto);
-//     })
-// }
+function thumbnailOnClick() {
+  $('.photo-grid').addEventListener('click', (e) => {
+    console.log(e.target.getAttribute('src'));
+    let selectedPhoto = getThisPhotoData(e.target.getAttribute('src'));
+    openGallery();
+    displayFullRes(selectedPhoto);
+  })
+}
 
 // function nextPhotoOnClick() {
 //     $('.next-photo-js').on('click', (e) => {
@@ -315,11 +312,11 @@ function loadError() {
 //     });
 // }
 
-// function closePhotoOnClick() { 
-//     $('.close-frame-js').on('click', (e) => {
-//         closeGallery();
-//     });
-// }
+function closePhotoOnClick() { 
+  $('.close-frame-js').addEventListener('click', (e) => {
+    closeGallery();
+  });
+}
 
 // function keyboardControls(){
 //     $('body').one('keyup', (e) => {
