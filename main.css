@@ -152,7 +152,7 @@ a>.nav-tab>i {
 }
 
 #navBar-js {
-	display: none;
+	/* TODO: animation */
 }
 
 .nav-bar {
@@ -656,7 +656,7 @@ a>.nav-tab>i {
 
 
 #error-js {
-	display: none;
+/* TODO: animation */
 }
 
 .error {
