@@ -18,10 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (STATE.currentView === 'photography') {
     loadGrid(galleryJSON);
     thumbnailOnClick();
-    // nextPhotoOnClick();
-    // prevPhotoOnClick();
+    nextPhotoOnClick();
+    prevPhotoOnClick();
     closePhotoOnClick();
-    // keyboardControls();
   }
 });
 
@@ -64,7 +63,6 @@ function loadNavBar() {
     </nav>
   `;
 };
-
 
 function loadMenu() {
   $('#menu-js').innerHTML = `
@@ -165,10 +163,16 @@ function toggleAriaHidden() {
   }
 };
 
+function toggleMainScrollLock() {
+  $('main').classList.toggle('scroll-lock');
+}
+
 function toggleMenu() {
   $('.burger').classList.toggle('open');
   $('.menu').classList.toggle('open');
   toggleAriaHidden();
+  toggleMainScrollLock();
+  window.scrollTo({top:0,left:0,behavior:'smooth'});
 }
 
 function burgerOnClick() {
@@ -227,6 +231,7 @@ function renderThumbnail(photo, index) {
 
 function openGallery() {
   $('.gallery-js').classList.toggle('open');
+  keyboardControls();
 }
 
 function closeGallery() {
@@ -238,9 +243,6 @@ function closeGallery() {
 function displayFullRes(data){
   $('.photo').setAttribute('src', data.fullResURL);
   $('.photo').setAttribute('alt', data.alt);
-  // $('.photo').add('load', () => {
-  //     $('.photo').fadeIn(400);
-  // });
 }
 
 function getThisPhotoData(currentPhoto) {
@@ -248,41 +250,41 @@ function getThisPhotoData(currentPhoto) {
   return galleryJSON[currentIndex];
 }
 
-// function getNextPhotoData(currentPhoto) {
-//     let currentIndex = galleryJSON.findIndex(item => item.fullResURL === currentPhoto);
-//     let nextIndex
-//     if (currentIndex === galleryJSON.length - 1) {
-//         nextIndex = 0;
-//     } else {
-//         nextIndex = currentIndex + 1;
-//     } 
-//     console.log(`%cCURRENT INDEX: ${currentIndex}`, "color: green; font-weight: bold;");
-//     console.log(`%cNEXT INDEX: ${nextIndex}`, "font-weight: bold;");
-//     return galleryJSON[nextIndex];
-// }
+function getNextPhotoData(currentPhoto) {
+  let currentIndex = galleryJSON.findIndex(item => item.fullResURL === currentPhoto);
+  let nextIndex;
+  if (currentIndex === galleryJSON.length - 1) {
+    nextIndex = 0;
+  } else {
+    nextIndex = currentIndex + 1;
+  } 
+  console.log(`%cCURRENT INDEX: ${currentIndex}`, "color: green; font-weight: bold;");
+  console.log(`%cNEXT INDEX: ${nextIndex}`, "font-weight: bold;");
+  return galleryJSON[nextIndex];
+}
 
-// function getPrevPhotoData(currentPhoto) {
-//     let currentIndex = galleryJSON.findIndex(item => item.fullResURL === currentPhoto);
-//     let prevIndex
-//     if (currentIndex === 0) {
-//         prevIndex = galleryJSON.length - 1;
-//     } else {
-//         prevIndex = currentIndex - 1;
-//     } 
-//     console.log(`%cCURRENT INDEX: ${currentIndex}`, "color: green; font-weight: bold;");
-//     console.log(`%cPREV INDEX: ${prevIndex}`, "font-weight: bold;");
-//     return galleryJSON[prevIndex];
-// }
+function getPrevPhotoData(currentPhoto) {
+  let currentIndex = galleryJSON.findIndex(item => item.fullResURL === currentPhoto);
+  let prevIndex
+  if (currentIndex === 0) {
+    prevIndex = galleryJSON.length - 1;
+  } else {
+    prevIndex = currentIndex - 1;
+  } 
+  console.log(`%cCURRENT INDEX: ${currentIndex}`, "color: green; font-weight: bold;");
+  console.log(`%cPREV INDEX: ${prevIndex}`, "font-weight: bold;");
+  return galleryJSON[prevIndex];
+}
 
-// function showNextPhoto() {
-//     let nextPhoto = getNextPhotoData($('.photo').attr('src'));
-//     displayFullRes(nextPhoto);
-// }
+function showNextPhoto() {
+  let nextPhoto = getNextPhotoData($('.photo').getAttribute('src'));
+  displayFullRes(nextPhoto);
+}
 
-// function showPrevPhoto() {
-//     let prevPhoto = getPrevPhotoData($('.photo').attr('src'));
-//     displayFullRes(prevPhoto);
-// }
+function showPrevPhoto() {
+  let prevPhoto = getPrevPhotoData($('.photo').getAttribute('src'));
+  displayFullRes(prevPhoto);
+}
 
 function loadGrid(data) {
   data.map((photo, index) => {
@@ -300,17 +302,17 @@ function thumbnailOnClick() {
   })
 }
 
-// function nextPhotoOnClick() {
-//     $('.next-photo-js').on('click', (e) => {
-//         showNextPhoto();
-//     });
-// }
+function nextPhotoOnClick() {
+  $('.next-photo-js').addEventListener('click', (e) => {
+    showNextPhoto();
+  });
+}
 
-// function prevPhotoOnClick() {
-//     $('.prev-photo-js').on('click', (e) => {
-//         showPrevPhoto();
-//     });
-// }
+function prevPhotoOnClick() {
+  $('.prev-photo-js').addEventListener('click', (e) => {
+    showPrevPhoto();
+  });
+}
 
 function closePhotoOnClick() { 
   $('.close-frame-js').addEventListener('click', (e) => {
@@ -318,23 +320,20 @@ function closePhotoOnClick() {
   });
 }
 
-// function keyboardControls(){
-//     $('body').one('keyup', (e) => {
-//         let keyName = e.key;
-//         //in each case, reset the listener after a key is pressed
-//         switch(keyName){
-//             case 'ArrowRight':
-//                 keyboardControls();
-//                 return showNextPhoto();
-//             case 'ArrowLeft':
-//                 keyboardControls();
-//                 return showPrevPhoto();
-//             case 'Escape':
-//                 keyboardControls();
-//                 return closeGallery();
-//             default:
-//                 //In case any other key is pressed, reset the listener
-//                 return keyboardControls();
-//         }
-//     });    
-// 
+function keyboardControls(){
+  console.log('listening for keys...')
+  $('body').addEventListener('keyup', (e) => {
+    let keyName = e.key;
+    switch(keyName){
+      case 'ArrowRight':
+        return showNextPhoto();
+      case 'ArrowLeft':
+        return showPrevPhoto();
+      case 'Escape':
+        return closeGallery();
+      default:
+        //In case any other key is pressed, do nothing
+        return null;
+    }
+  });    
+}
