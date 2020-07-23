@@ -1,230 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- METADATA -->
 
-<head>
-	<!-- METADATA -->
+    <meta
+      charset="utf-8"
+      name="description"
+      content="Portfolio showcasing full-stack web applications, gallery of landscape, astro, and travel photography, and a collection of free resources for new developers."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alex Warnes Portfolio</title>
+    <!-- TO DO: <link rel="icon" href="#"> -->
 
-	<meta charset="utf-8" name="description" content="Portfolio showcasing full-stack web applications, gallery of landscape, astro, and travel photography, and a collection of free resources for new developers.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Alex Warnes Portfolio</title>
-	<!-- TO DO: <link rel="icon" href="#"> -->
+    <!-- STYLES -->
 
-	<!-- STYLES -->
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400|Raleway:100,200,400,600"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.0/css/all.css"
+      rel="stylesheet"
+    />
 
-		<!-- Fonts & Icons -->
-			<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400|Raleway:100,200,400,600" rel="stylesheet">
-			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-			<link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="../gridrules.css" />
+    <link rel="stylesheet" href="../main.css" />
+  </head>
+  <body>
+    <div id="navBar-js"></div>
+    <div id="menu-js"></div>
 
-		<!-- Stylesheets -->
-			<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-			<link rel="stylesheet" href="../gridrules.css">
-			<link rel="stylesheet" href="../main.css">
-</head>
-<body>
-	<div id="navBar-js"></div>
-	<div id="menu-js"></div>
+    <header class="webdev-header content-header" role="banner">
+      <h1>Web Development</h1>
+      <p>
+        Combining technology, creativity, and useability to help people in big
+        and small ways.
+      </p>
+      <p class="tools-title">Current Toolkit</p>
+      <div class="code-box">
+        <p class="code-tag">HTML5</p>
+        <p class="code-tag">CSS3</p>
+        <p class="code-tag">JavaScript ES6</p>
+        <p class="code-tag">jQuery</p>
+        <p class="code-tag">React</p>
+        <p class="code-tag">Redux</p>
+        <p class="code-tag">Node</p>
+        <p class="code-tag">Express</p>
+        <p class="code-tag">MongoDB</p>
+        <p class="code-tag">Mocha</p>
+        <p class="code-tag">Chai</p>
+      </div>
+    </header>
 
-	<header class="webdev-header content-header" role="banner">
-			<h1>Web Development</h1>
-			<p>Combining technology, creativity, and useability to help people in big and small ways.</p>	
-			<p class="tools-title">Current Toolkit</p>
-			<div class="code-box">
-				<p class="code-tag">HTML5</p>
-				<p class="code-tag">CSS3</p>
-				<p class="code-tag">JavaScript ES6</p>
-				<p class="code-tag">jQuery</p>
-				<p class="code-tag">React</p>
-				<p class="code-tag">Redux</p>
-				<p class="code-tag">Node</p>
-				<p class="code-tag">Express</p>
-				<p class="code-tag">MongoDB</p>
-				<p class="code-tag">Mocha</p>
-				<p class="code-tag">Chai</p>
-			</div>
-	</header>
+    <main>
+      <div class="section-break">
+        <i class="material-icons break-icon">code</i>
+      </div>
 
-	<main>
+      <section id="f/StopandGo" class="proj-container" role="region">
+        <div class="proj-card">
+          <h2 class="proj-title">f/StopandGo</h2>
+          <p class="proj-subtitle dkblue">The photographer's notepad.</p>
+          <div class="code-box">
+            <p class="code-tag">React</p>
+            <p class="code-tag">Redux</p>
+            <p class="code-tag">HTML5</p>
+            <p class="code-tag">CSS3</p>
+            <p class="code-tag">JavaScript ES6</p>
+            <p class="code-tag">jQuery</p>
+            <p class="code-tag">Node</p>
+            <p class="code-tag">Express</p>
+            <p class="code-tag">MongoDB</p>
+            <p class="code-tag">Mocha</p>
+            <p class="code-tag">Chai</p>
+          </div>
+          <p class="proj-description">
+            Built to replace the notepad in my camera bag that's full of
+            disorganized techniques, settings, gear, specific shots, timelapse
+            math, and other notes. f/StopandGo aims to help photographers grow
+            by motivating people to get out and use their camera, build on one
+            technique at a time, and not be intimidated by the endless
+            combination of settings.
+          </p>
+          <div class="link-box">
+            <a
+              href="https://fstopandgo.herokuapp.com"
+              class="proj-link proj-link-visit btn-link background-metal white"
+              target="_blank"
+              aria-label="Travellists"
+              rel="noopener noreferrer"
+            >
+              <i class="material-icons proj-link-icon">open_in_new</i>
+              Visit
+            </a>
+            <a
+              href="https://github.com/AlexWarnes/fStopandGo"
+              class="proj-link proj-link-code btn-link background-metal white"
+              target="_blank"
+              aria-label="Travellists Code"
+              rel="noopener noreferrer"
+            >
+              Source
+              <i class="material-icons proj-link-icon">code</i>
+              Code
+            </a>
+          </div>
+        </div>
+        <div class="proj-img-card">
+          <img
+            src="../assets/fStopandGo_1.png"
+            alt="fStopandGo Site"
+            class="proj-img"
+          />
+        </div>
+      </section>
 
-		<div class="section-break"><i class="material-icons break-icon">code</i></div>
+      <div class="section-break">
+        <i class="material-icons break-icon">code</i>
+      </div>
+      <section id="APODexplorer" class="proj-container" role="region">
+        <div class="proj-card">
+          <h2 class="proj-title">APOD Explorer</h2>
+          <p class="proj-subtitle dkblue">Scroll through the universe.</p>
+          <div class="code-box">
+            <p class="code-tag">HTML5</p>
+            <p class="code-tag">CSS3</p>
+            <p class="code-tag">JavaScript ES6</p>
+            <p class="code-tag">jQuery</p>
+          </div>
+          <p class="proj-description">
+            Explore NASA Astronomy Picture of the Day (APOD) archives, discover
+            classic photos, and get inspired by simply scrolling. The official
+            APOD site is difficult to quickly and easily browse through old
+            APODs. This project solves that problem using the NASA Open Data
+            APOD API to generate random APODs from the archives, giving the user
+            a new experience on every visit.
+          </p>
+          <div class="link-box">
+            <a
+              href="https://alexwarnes.github.io/APODexplorer/"
+              class="proj-link proj-link-visit btn-link background-metal white"
+              target="_blank"
+              aria-label="APOD Explorer"
+              rel="noopener noreferrer"
+            >
+              <i class="material-icons proj-link-icon">open_in_new</i>
+              Visit
+            </a>
+            <a
+              href="https://github.com/AlexWarnes/APODexplorer"
+              class="proj-link proj-link-code btn-link background-metal white"
+              target="_blank"
+              aria-label="APOD Explorer Code"
+              rel="noopener noreferrer"
+            >
+              Source
+              <i class="material-icons proj-link-icon">code</i>
+              Code
+            </a>
+          </div>
+        </div>
+        <div class="proj-img-card">
+          <img
+            src="../assets/APODexplorer.png"
+            alt="APOD Explorer Site"
+            class="proj-img"
+          />
+        </div>
+      </section>
 
-    <section id="f/StopandGo" class="proj-container" role="region"> 
-			<div class="proj-card">
-        <h2 class="proj-title">f/StopandGo</h2>
-        <p class="proj-subtitle dkblue">The photographer's notepad.</p>
-				<div class="code-box">
-          <p class="code-tag">React</p>
-          <p class="code-tag">Redux</p>
-          <p class="code-tag">HTML5</p>
-					<p class="code-tag">CSS3</p>
-					<p class="code-tag">JavaScript ES6</p>
-					<p class="code-tag">jQuery</p>
-					<p class="code-tag">Node</p>
-					<p class="code-tag">Express</p>
-					<p class="code-tag">MongoDB</p>
-					<p class="code-tag">Mocha</p>
-					<p class="code-tag">Chai</p>
-				</div>
-				<p class="proj-description">
-          Built to replace the notepad in my camera bag that's full of disorganized techniques, settings, gear, specific shots, timelapse math, and other notes. f/StopandGo aims to help photographers grow by motivating people to get out and use their camera, build on one technique at a time, and not be intimidated by the endless combination of settings.
-				</p>
-				<div class="link-box">
-					<a href="https://fstopandgo.herokuapp.com" class="proj-link proj-link-visit btn-link background-metal white" target="_blank" aria-label="Travellists" rel="noopener noreferrer">
-						<i class="material-icons proj-link-icon">open_in_new</i>
-						Visit
-					</a>
-					<a href="https://github.com/AlexWarnes/fStopandGo" class="proj-link proj-link-code btn-link background-metal white" target="_blank" aria-label="Travellists Code" rel="noopener noreferrer">
-						Source
-						<i class="material-icons proj-link-icon">code</i>
-						Code
-					</a>
-				</div>
-			</div>
-			<div class="proj-img-card">
-				<img src="../assets/fStopandGo_1.png" alt="fStopandGo Site" class="proj-img">
-			</div>
-		</section>
-			
-		<div class="section-break"><i class="material-icons break-icon">code</i></div>
-    <section id="APODexplorer" class="proj-container" role="region"> 
-			<div class="proj-card">
-        <h2 class="proj-title">APOD Explorer</h2>
-        <p class="proj-subtitle dkblue">Scroll through the universe.</p>
-				<div class="code-box">
-					<p class="code-tag">HTML5</p>
-					<p class="code-tag">CSS3</p>
-					<p class="code-tag">JavaScript ES6</p>
-					<p class="code-tag">jQuery</p>
-				</div>
-				<p class="proj-description">
-						Explore NASA Astronomy Picture of the Day (APOD) archives, discover classic photos, and get inspired by simply scrolling. The official APOD site is difficult to quickly and easily browse through old APODs. This project solves that problem using the NASA Open Data APOD API to generate random APODs from the archives, giving the user a new experience on every visit.
-				</p>
-				<div class="link-box">
-					<a href="https://www.apodexplorer.com" class="proj-link proj-link-visit btn-link background-metal white" target="_blank" aria-label="APOD Explorer" rel="noopener noreferrer">
-						<i class="material-icons proj-link-icon">open_in_new</i>
-						Visit
-					</a>
-					<a href="https://github.com/AlexWarnes/APODexplorer" class="proj-link proj-link-code btn-link background-metal white" target="_blank" aria-label="APOD Explorer Code" rel="noopener noreferrer">
-						Source
-						<i class="material-icons proj-link-icon">code</i>
-						Code
-					</a>
-				</div>
-			</div>
-			<div class="proj-img-card">
-				<img src="../assets/APODexplorer.png" alt="APOD Explorer Site" class="proj-img">
-			</div>
-		</section>
+      <div class="section-break">
+        <i class="material-icons break-icon">code</i>
+      </div>
 
-		<div class="section-break"><i class="material-icons break-icon">code</i></div>
+      <section id="Travellists" class="proj-container" role="region">
+        <div class="proj-card">
+          <h2 class="proj-title">Travellists</h2>
+          <p class="proj-subtitle dkblue">Travel smarter.</p>
+          <div class="code-box">
+            <p class="code-tag">HTML5</p>
+            <p class="code-tag">CSS3</p>
+            <p class="code-tag">JavaScript ES6</p>
+            <p class="code-tag">jQuery</p>
+            <p class="code-tag">Node</p>
+            <p class="code-tag">Express</p>
+            <p class="code-tag">MongoDB</p>
+            <p class="code-tag">Mocha</p>
+            <p class="code-tag">Chai</p>
+          </div>
+          <p class="proj-description">
+            Inspired by good and bad travel recommendations, Travellists is a
+            platform to find recommendations for places to go from people whose
+            travel-styles match your own. You can create lists after a trip, or
+            prepare for an upcoming trip by finding lists from travelers. Get
+            the right lists for you by finding authors whose descriptions and
+            travel history seem like your cup of tea (or coffee, whichever you
+            prefer).
+          </p>
+          <div class="link-box">
+            <a
+              href="https://travellists.herokuapp.com"
+              class="proj-link proj-link-visit btn-link background-metal white"
+              target="_blank"
+              aria-label="Travellists"
+              rel="noopener noreferrer"
+            >
+              <i class="material-icons proj-link-icon">open_in_new</i>
+              Visit
+            </a>
+            <a
+              href="https://github.com/AlexWarnes/Travellists"
+              class="proj-link proj-link-code btn-link background-metal white"
+              target="_blank"
+              aria-label="Travellists Code"
+              rel="noopener noreferrer"
+            >
+              Source
+              <i class="material-icons proj-link-icon">code</i>
+              Code
+            </a>
+          </div>
+        </div>
+        <div class="proj-img-card">
+          <img
+            src="../assets/Travellists_2.png"
+            alt="Travellists Site"
+            class="proj-img"
+          />
+        </div>
+      </section>
 
-		<section id="Travellists" class="proj-container" role="region"> 
-			<div class="proj-card">
-        <h2 class="proj-title">Travellists</h2>
-        <p class="proj-subtitle dkblue">Travel smarter.</p>
-				<div class="code-box">
-					<p class="code-tag">HTML5</p>
-					<p class="code-tag">CSS3</p>
-					<p class="code-tag">JavaScript ES6</p>
-					<p class="code-tag">jQuery</p>
-					<p class="code-tag">Node</p>
-					<p class="code-tag">Express</p>
-					<p class="code-tag">MongoDB</p>
-					<p class="code-tag">Mocha</p>
-					<p class="code-tag">Chai</p>
-				</div>
-				<p class="proj-description">
-						Inspired by good and bad travel recommendations, Travellists is a platform to find recommendations for places to go from people whose travel-styles match your own. You can create lists after a trip, or prepare for an upcoming trip by finding lists from travelers. Get the right lists for you by finding authors whose descriptions and travel history seem like your cup of tea (or coffee, whichever you prefer).
-				</p>
-				<div class="link-box">
-					<a href="https://travellists.herokuapp.com" class="proj-link proj-link-visit btn-link background-metal white" target="_blank" aria-label="Travellists" rel="noopener noreferrer">
-						<i class="material-icons proj-link-icon">open_in_new</i>
-						Visit
-					</a>
-					<a href="https://github.com/AlexWarnes/Travellists" class="proj-link proj-link-code btn-link background-metal white" target="_blank" aria-label="Travellists Code" rel="noopener noreferrer">
-						Source
-						<i class="material-icons proj-link-icon">code</i>
-						Code
-					</a>
-				</div>
-			</div>
-			<div class="proj-img-card">
-				<img src="../assets/Travellists_2.png" alt="Travellists Site" class="proj-img">
-			</div>
-		</section>
-			
-		<div class="section-break"><i class="material-icons break-icon">code</i></div>
-	
-		<section id="Jargonator" class="proj-container" role="region"> 
-			<div class="proj-card">
-        <h2 class="proj-title">Jargonator</h2>
-        <p class="proj-subtitle dkblue">Say something... without really saying anything.</p>
-				<div class="code-box">
-					<p class="code-tag">HTML5</p>
-					<p class="code-tag">CSS3</p>
-					<p class="code-tag">JavaScript ES6</p>
-					<p class="code-tag">jQuery</p>
-					<p class="code-tag">Node</p>
-				</div>
-				<p class="proj-description">
-					A simple expiremental project to practice the basics of Node.js and connecting the back-end to the front-end. Jargonator uses the Faker package to produce an almost limitless variety of funny catchphrases, and serve them to the Jargonator on request.
-				</p>
-				<div class="link-box">
-					<a href="https://jargonator.herokuapp.com" class="proj-link proj-link-visit btn-link background-metal white" target="_blank" aria-label="Jargonator" rel="noopener noreferrer">
-						<i class="material-icons proj-link-icon">open_in_new</i>
-						Visit
-					</a>
-					<a href="https://github.com/AlexWarnes/Jargonator" class="proj-link proj-link-code btn-link background-metal white" target="_blank" aria-label="Jargonator Code" rel="noopener noreferrer">
-						Source
-						<i class="material-icons proj-link-icon">code</i>
-						Code
-					</a>
-				</div>
-			</div>
-			<div class="proj-img-card">
-				<img src="../assets/Jargonator.png" alt="Jargonator Site" class="proj-img">
-			</div>
-		</section>
+      <div class="section-break">
+        <i class="material-icons break-icon">code</i>
+      </div>
 
-		<div class="section-break"><i class="material-icons break-icon">code</i></div>
+      <section id="Jargonator" class="proj-container" role="region">
+        <div class="proj-card">
+          <h2 class="proj-title">Jargonator</h2>
+          <p class="proj-subtitle dkblue">
+            Say something... without really saying anything.
+          </p>
+          <div class="code-box">
+            <p class="code-tag">HTML5</p>
+            <p class="code-tag">CSS3</p>
+            <p class="code-tag">JavaScript ES6</p>
+            <p class="code-tag">jQuery</p>
+            <p class="code-tag">Node</p>
+          </div>
+          <p class="proj-description">
+            A simple expiremental project to practice the basics of Node.js and
+            connecting the back-end to the front-end. Jargonator uses the Faker
+            package to produce an almost limitless variety of funny
+            catchphrases, and serve them to the Jargonator on request.
+          </p>
+          <div class="link-box">
+            <a
+              href="https://jargonator.herokuapp.com"
+              class="proj-link proj-link-visit btn-link background-metal white"
+              target="_blank"
+              aria-label="Jargonator"
+              rel="noopener noreferrer"
+            >
+              <i class="material-icons proj-link-icon">open_in_new</i>
+              Visit
+            </a>
+            <a
+              href="https://github.com/AlexWarnes/Jargonator"
+              class="proj-link proj-link-code btn-link background-metal white"
+              target="_blank"
+              aria-label="Jargonator Code"
+              rel="noopener noreferrer"
+            >
+              Source
+              <i class="material-icons proj-link-icon">code</i>
+              Code
+            </a>
+          </div>
+        </div>
+        <div class="proj-img-card">
+          <img
+            src="../assets/Jargonator.png"
+            alt="Jargonator Site"
+            class="proj-img"
+          />
+        </div>
+      </section>
 
-		<section id="Almagest" class="proj-container" role="region"> 
-			<div class="proj-card">
-        <h2 class="proj-title">Almagest</h2>
-        <p class="proj-subtitle dkblue">Plan your stargazing.</p>
-				<div class="disclaimer">
-					<i class="material-icons">error_outline</i>
-					<p class="disclaimer-text">Disclaimer: While you can still view this site, it is non-functional due to API changes.</p>
-				</div>
-				
-				<div class="code-box">
-					<p class="code-tag">HTML5</p>
-					<p class="code-tag">CSS3</p>
-					<p class="code-tag">JavaScript ES6</p>
-					<p class="code-tag">jQuery</p>
-				</div>
-				<p class="proj-description">
-					Almagest is a three-step tool to help plan stargazing or astrophotography outings. Named after one of the most influential scientific texts of all time, Almagest provides light pollution data, sunrise and sunset times, moonrise and moonset times, and forecast data in one place, alleviating the hassle of checking multiple sites.
-				</p>
-				<div class="link-box">
-					<a href="https://alexwarnes.github.io/Almagest/" class="proj-link proj-link-visit btn-link background-metal white" target="_blank" aria-label="Almagest" rel="noopener noreferrer">
-						<i class="material-icons proj-link-icon">open_in_new</i>
-						Visit
-					</a>
-					<a href="https://github.com/AlexWarnes/Almagest" class="proj-link proj-link-code btn-link background-metal white" target="_blank" aria-label="Almagest Code" rel="noopener noreferrer">
-						Source
-						<i class="material-icons proj-link-icon">code</i>
-						Code
-					</a>
-				</div>
-			</div>
-			<div class="proj-img-card">
-				<img src="../assets/Almagest.png" alt="Almagest Site" class="proj-img">
-			</div>
-		</section>
+      <div class="section-break">
+        <i class="material-icons break-icon">code</i>
+      </div>
 
-		<div class="section-break"><i class="material-icons break-icon">code</i></div>
-	</main>
-	<script type="text/javascript" src="../app.js"></script>
-</body>
+      <section id="Almagest" class="proj-container" role="region">
+        <div class="proj-card">
+          <h2 class="proj-title">Almagest</h2>
+          <p class="proj-subtitle dkblue">Plan your stargazing.</p>
+          <div class="disclaimer">
+            <i class="material-icons">error_outline</i>
+            <p class="disclaimer-text">
+              DEPRECATED: While you can still view this site, it is
+              non-functional and no longer maintained due to API changes.
+            </p>
+          </div>
+
+          <div class="code-box">
+            <p class="code-tag">HTML5</p>
+            <p class="code-tag">CSS3</p>
+            <p class="code-tag">JavaScript ES6</p>
+            <p class="code-tag">jQuery</p>
+          </div>
+          <p class="proj-description">
+            Almagest is a three-step tool to help plan stargazing or
+            astrophotography outings. Named after one of the most influential
+            scientific texts of all time, Almagest provides light pollution
+            data, sunrise and sunset times, moonrise and moonset times, and
+            forecast data in one place, alleviating the hassle of checking
+            multiple sites.
+          </p>
+          <div class="link-box">
+            <a
+              href="https://alexwarnes.github.io/Almagest/"
+              class="proj-link proj-link-visit btn-link background-metal white"
+              target="_blank"
+              aria-label="Almagest"
+              rel="noopener noreferrer"
+            >
+              <i class="material-icons proj-link-icon">open_in_new</i>
+              Visit
+            </a>
+            <a
+              href="https://github.com/AlexWarnes/Almagest"
+              class="proj-link proj-link-code btn-link background-metal white"
+              target="_blank"
+              aria-label="Almagest Code"
+              rel="noopener noreferrer"
+            >
+              Source
+              <i class="material-icons proj-link-icon">code</i>
+              Code
+            </a>
+          </div>
+        </div>
+        <div class="proj-img-card">
+          <img
+            src="../assets/Almagest.png"
+            alt="Almagest Site"
+            class="proj-img"
+          />
+        </div>
+      </section>
+
+      <div class="section-break">
+        <i class="material-icons break-icon">code</i>
+      </div>
+    </main>
+    <script type="text/javascript" src="../app.js"></script>
+  </body>
 </html>
